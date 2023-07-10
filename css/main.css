@@ -1,0 +1,1465 @@
+@charset 'utf-8';
+
+html {
+	font-family: 'Inter';
+	font-size: 14px;
+	background-color: black;
+}
+body {
+	overflow-x: hidden;
+	color: rgb(29, 29, 31);
+	letter-spacing: -0.05em;
+}
+p {
+	line-height: 1.6;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+.container {
+	/* iPhone 가로 스크롤 방지 */
+	overflow-x: hidden;
+}
+
+#stickly-buttons {
+	display: flex;
+	position: fixed;
+	padding: 0px;
+	z-index: 100;
+	background-color: transparent;
+	width: 1000;
+	bottom: 8px;
+	right: 0;
+	z-index: 1000;
+}
+
+#stickly-buttons  .global-links {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	max-width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	gap: 10px;
+}
+
+
+#stickly-buttons .event-button .bottom-fixed {
+	position: fixed;
+}
+
+#stickly-buttons .event-button {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 13px 24px;
+	width: 199px;
+	height: 52px;
+	background: #0085FF;
+	z-index: 1000;
+	border-radius: 16px;
+}
+
+#stickly-buttons .learn-more {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 13px 24px;
+	margin-right: 12px;
+	width: 153px;
+	z-index: 1000;
+	height: 52px;
+	background: #28E7C5;
+	border-radius: 16px;
+}
+
+#stickly-buttons p {
+	width: 151px;
+	height: 26px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	color: #000000;
+}
+
+
+
+.scroll-section {
+	position: relative;
+}
+
+#hero-section {
+	width: 100%;
+	height: 130vh;
+	min-height: 1000px;
+	background-image: url("../images/hero.jpg");
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size:  cover;      
+	display: flex;
+	justify-content: center; /* Centering Horizantly */
+	align-items: top; 
+}
+
+.hero-section-overlay {
+	position: absolute; /* Sit on top of the page content */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(8px);
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+.hero-section-bottom {
+	position: absolute;
+	background-image: url("../images/hero-bottom.jpg");
+	bottom: 0;
+	width: 100%;
+	height: 7%;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-size:  cover; 
+	background-position: bottom;
+}
+
+#hero-section h1 {
+	position: relative;
+	line-height: 93%;
+	font-family: 'Inter';
+	left: 18%;
+	font-size: 6.5rem;
+	text-align: left;
+	font-weight: 800;
+	color: white;
+	z-index: 100;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 800;
+	background: linear-gradient(180deg, #00FFD2 0%, #00A3FF 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+
+#hero-section .hero-layout {
+	top: 5%;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: left; 
+}
+
+#hero-section .hero-nyx-logo {
+	background-image: url("../images/nyxs-icon.png");
+	background-repeat: no-repeat;
+	background-size:  contain; 
+	background-position: left;
+	position: absolute;
+	top: 24px;
+	left: 25%;
+	width: 10%;
+	height: 24px;
+	z-index: 10;
+}
+
+#hero-section .video-text {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center; 
+	width: 100%;
+}
+
+
+#hero-section video {
+	padding-top: 4vh;
+	width: 65%;
+	z-index: 3;
+}
+
+#hero-section p {
+	color: white;
+	padding-top: 24px;
+	width: 65%;
+	font-weight: 300;
+	font-size: 1.2rem;
+	z-index: 3;
+}
+
+
+#scroll-section-1  {
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("../images/bg_1.jpg");
+	background-repeat: repeat;
+	background-size: contain;    
+	z-index: 0;
+}
+
+
+#scroll-section-1  .scroll-section-1-overlay {
+	position: absolute; /* Sit on top of the page content */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black; /* Black background with opacity */
+	z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
+#scroll-section-1 .wise-words {
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: right; 
+	opacity: 0;
+	top: 6vh;
+	left: 3vw;
+}
+
+.wise-words .words {
+	font-size: 1.5rem;
+	line-height: 140%;
+	color: #FFFFFF;
+	font-weight: 100;
+}
+
+.wise-words .author {
+	color: #999999;
+	padding-top: 8px;
+	font-size: 1.2rem;
+}
+
+#scroll-section-1 .launching-date {
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center;
+	top: 36%;
+} 
+
+#scroll-section-1 .launching-date p {
+	font-size:1.8rem;
+	font-weight: 300;
+	color: #FAFAFA;
+	font-weight: 100;
+} 
+
+#scroll-section-1 .launching-date h1 {
+	font-size: 12vw;
+	font-weight: 300;
+	letter-spacing: -32px;
+	text-align: left;
+	color: #FFFFFF;
+	font-weight: 700;
+	z-index: 10;
+} 
+
+#scroll-section-1 .nyxs_1 {
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+#scroll-section-1 .nyxs_1_text {
+	display: flex;
+	flex-direction: column;
+	justify-content: right; 
+	align-items: right; 
+	background-color: black;
+} 
+
+#scroll-section-1 .title {
+	color: #FFFFFF;
+	padding-top: 40px;
+	font-weight: 700;
+	line-height: 106%;
+} 
+
+
+#scroll-section-1 .description {
+	padding-top: 24px;
+	font-weight: 300;
+	font-size: 2.0rem;
+	z-index: 1;
+	color: #FFFFFF;
+
+} 
+
+
+.main-message {
+	display: flex;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center; 
+	margin: 5px 0;
+	height: 1em;
+	font-size: 2.5rem;
+	z-index: 100;
+}
+
+.sticky-elem {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#scroll-section-1 .nyxs_text {
+	flex-direction: column;
+	top: 50%;
+	left: 50%;
+	width: 35%;
+} 
+
+#scroll-section-1 .nyxs_text h1 {
+	font-size: 4.0rem;
+	font-weight: 700;
+
+}
+
+#scroll-section-1 .nyxs_text p {
+	font-size: 1.5rem;
+	opacity: 0.8;
+	font-weight: 400;
+}
+
+#scroll-section-1 .nyxs_text div {
+	height: 1.5vh;
+	width: 3vw;
+	background-image: url("../images/underbar.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+}
+
+#scroll-section-1 .nyxs_pic {
+	top: 25%;
+	left: 30%;
+	height: 50vh;
+	width: 40vw;
+	overflow: hidden;
+} 
+
+#scroll-section-1 .nyxs_pic div {
+	background-image: url("../images/nyxs_1.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+#scroll-section-1 .nyxs_1 .nyxs_text  {
+	opacity: 0;
+}
+
+
+#scroll-section-1 .nyxs_1 .nyxs_text div {
+	left: 0;
+}
+
+#scroll-section-1 .nyxs_2 .nyxs_pic div {
+	background-image: url("../images/nyxs_2.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+
+}
+
+#scroll-section-1 .nyxs_2 .nyxs_text div {
+	right: 0;
+}
+
+#scroll-section-1 .nyxs_2 .nyxs_text {
+	left: 15%;
+	text-align: right;	
+	opacity: 0;
+} 
+
+#scroll-section-1 .nyxs_3 .nyxs_pic div {
+	background-image: url("../images/nyxs_3.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+
+}
+#scroll-section-1 .nyxs_3 .nyxs_text  {
+	opacity: 0;
+}
+
+
+#scroll-section-1 .nyxs_3 .nyxs_text div {
+	left: 0;
+}
+
+
+#scroll-section-1 .nyxs_4 .nyxs_pic div {
+	background-image: url("../images/nyxs_4.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+
+#scroll-section-1 .nyxs_4 .nyxs_text div {
+	right: 0;
+}
+
+#scroll-section-1 .nyxs_4 .nyxs_text {
+	left: 15%;
+	text-align: right;
+	opacity: 0;
+} 
+
+#scroll-section-2 {
+	background-image: url("../images/section2_bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;  
+	width: 100%;
+	height: 400vh;
+}
+
+#scroll-section-2 .sticky-elem {
+	color: black;
+	height: 100%;
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center;
+}
+
+#scroll-section-2 .sticky-elem .nyxs-logo-text {
+	background-image: url("../images/section2_text.png");
+	height: 20vw;
+	width: 30vw;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	background-size: contain;
+}
+
+#scroll-section-2 .sticky-elem p {
+	font-size: 1.8rem;
+	padding-top: 2%;
+	font-family: 'Inter';
+	font-weight: 300;
+	text-align: left;
+	width: 30%;
+}
+
+#scroll-section-3 {
+	width: 100%;
+	height: 300vh;
+	background-image: url("../images/bg_1.jpg");
+	background-repeat: repeat;
+	background-size: contain; 
+	overflow-x: hidden;
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center; 
+}
+
+#scroll-section-3 .how-to-play {
+	width: 100%;
+	padding-top: 25%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly; /* Centering Horizantly */
+	align-items: center; 
+	text-align: left;
+}
+
+#scroll-section-3 .how-to-play .reversed {
+	text-align: right;
+
+}
+
+#scroll-section-3 .how-to-play .htp-title {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 6.0vw;
+	line-height: 150%;
+	background: linear-gradient(125.46deg, #0085FF -2.71%, #00FFD1 88.65%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+#scroll-section-3 .how-to-play .htp-description {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5vw;
+	line-height: 130%;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+
+#scroll-section-3 .how-to-play .text-section  {
+	/* height: 50%; */
+	display: flex;
+	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+	padding-right: 4vw;
+	padding-left: 4vw;
+}
+
+#scroll-section-3 .how-to-play .htp {
+	height: 50vh;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	z-index: 2;
+}
+#scroll-section-3 .how-to-play .htp-pic  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	flex-direction: column;
+}
+
+#scroll-section-3 .how-to-play #htp-1 .htp-text-1 {
+	opacity: 0;
+}
+
+#scroll-section-3 .how-to-play .htp-pic-1  {
+	background-image: url("../images/htp_1.png");
+	background-repeat: no-repeat;
+	background-size: contain; 
+	width: 40%;
+	transform: translateY(10%);
+	
+}
+
+#scroll-section-3 .how-to-play .htp-pic-2  {
+	background-image: url("../images/htp_2.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain; 
+
+}
+
+
+#scroll-section-3 .how-to-play .htp-pic-3  {
+	background-image: url("../images/htp_3.png");
+	background-repeat: no-repeat;
+	background-size: contain; 
+	width: 40%;
+}
+
+
+#scroll-section-3 .how-to-play .htp-pic-4  {
+	background-image: url("../images/htp_4.png");
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain; 
+}
+
+
+#scroll-section-4 {
+	height: 100%;
+	width: 100%;
+}
+
+#scroll-section-4 .video-bg {
+	position: absolute;
+	width:100%;
+	height:100vh;
+  }
+
+  #scroll-section-4 .video-overlay {
+	position: relative;
+	width:100%;
+	height:100vh;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 1;
+  }
+  
+#scroll-section-4 .video-bg video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }	
+  
+#scroll-section-4  .video-text {
+	position: absolute;
+	display: flex;
+	top: 25vh;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: white;
+	z-index: 2;
+  }
+
+#scroll-section-4  .video-text h1 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 4.0rem;
+	text-align: center;
+	color: #FFFFFF;
+  }
+
+#scroll-section-4  .video-text p {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	padding-top: 5vh;
+	font-size: 1.8rem;
+	line-height: 32px;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: 0.8;
+	width: 50%;
+}
+
+#scroll-section-4  .video-text .app-download-btns {
+	display: flex;
+	width: 50%;
+	max-width: 480px;
+	min-width: 320px;
+	padding-top: 5vh;
+	height: 30%;
+	min-height: 250px;
+	justify-content: top;
+	flex-direction: row;
+	align-items: top;
+	z-index: 100;
+}
+
+#scroll-section-4 #android {
+	height: 50%;
+	width: 100%;
+	background-image: url("../images/play_store.png");
+	background-repeat: no-repeat;
+	background-size: contain;  
+	background-position: top right;
+	transform: translateX(-3%);
+
+}
+
+#scroll-section-4 #ios {
+	height: 50%;
+	width: 100%;
+	background-image: url("../images/apple_button.png");
+	background-repeat: no-repeat;
+	background-size: contain;  
+	background-position: top left;
+	transform: translateX(3%);
+}
+
+
+#scroll-section-5 {
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/bg_1.jpg");
+	overflow-x: hidden;
+}
+
+#scroll-section-5 #team-intro {
+	height: 100%;
+	width: 100%;
+	display: hidden;
+	flex-direction: column;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center;
+}
+
+#scroll-section-5 #team-intro h1 {
+	font-size: 7.5rem;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 800;
+	line-height: 130px;
+	text-align: center;
+	color: #FFFFFF;
+	z-index: 10;
+}
+
+#scroll-section-5 #team-intro p {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 2rem;
+	text-align: center;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+
+#scroll-section-5 #team-member {
+	height: 100%;
+	width: 100%;
+	display: hidden;
+	flex-direction: row;
+	justify-content: center; /* Centering Horizantly */
+	align-items: center;
+}
+
+#scroll-section-5 #team-member .team-photo {
+	height: 50%;
+	width: 25%;
+	z-index: 3;
+}
+
+#scroll-section-5 #team-member .team-photo div {
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/pictures/Tony.jpg");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;   
+	z-index: 100;
+}
+
+#scroll-section-5 #team-member .team-photo p {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.5rem;
+	color: #FFFFFF;
+	opacity: 0.8;
+}
+
+#scroll-section-5 #team-member .team-txt {
+	height: 50%;
+	width: 25%;
+	padding-left: 16px;
+	z-index: 3;
+	transform: translate(24px,-30%);
+}
+
+#scroll-section-5 #team-member .team-txt h1 {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 70px;
+	font-size: 3.5rem;
+	color: #FFFFFF;
+}
+
+#scroll-section-5 #team-member .team-txt p {
+	padding-top: 16px;
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 300;
+	font-size: 48px;
+	font-size: 2rem;
+	color: #FFFFFF;
+	opacity: 0.6;
+}
+
+#scroll-section-5 #team-member .team-txt .a {
+	transform: translateX(25%);
+}
+
+#scroll-section-5 #team-member .team-txt .b {
+	transform: translateX(-25%);
+}
+
+
+
+#scroll-section-5 #team-member .team-txt .d {
+	transform: translateX(20%);
+}
+
+
+#show-scene-0 #hero-section .sticky-elem,
+#show-scene-0 #hero-section .normal-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem,
+#show-scene-3 #scroll-section-3  #htp-1 .htp-text-1,
+#show-scene-3 #scroll-section-3  #htp-2 .htp-text-2,
+#show-scene-3 #scroll-section-3  #htp-1 .htp-text-3,
+#show-scene-3 #scroll-section-3  #htp-1 .htp-text-4,
+#show-scene-4 #scroll-section-4 .sticky-elem,
+#show-scene-5 #scroll-section-5 .sticky-elem
+{
+	display: flex;
+	will-change: transform, opacity;
+}
+
+footer {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 160px;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+footer .footer-section {
+	display: flex;
+	width: 75%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 60%;
+
+}
+
+footer .x-logo {
+	background-image: url("../images/x-logo.png");
+	background-repeat: no-repeat;
+	background-size: contain;   
+	z-index: 100;
+	height: 48px;
+	width: 49.12px;
+}
+
+footer .footer-left {
+	z-index: 100;
+	height: 64px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+footer .icon-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	height: 40%;
+	width: 100%;
+
+}
+
+footer .icon-list .twitter {
+	background-image: url("../images/twitter.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+footer .icon-list .telegram {
+	background-image: url("../images/telegram.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+footer .icon-list .discord {
+	background-image: url("../images/discord.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+footer .icon-list .medium {
+	background-image: url("../images/medium.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+footer .icon-list .instagram {
+	background-image: url("../images/instagram.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+footer .icon-list .mail {
+	background-image: url("../images/mail.png");
+	width: 48px;
+	background-size: contain;  
+	height: 48px;
+}
+
+footer p {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	padding-top: 24px;
+	font-size: 1rem;
+	line-height: 22px;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1100px) {
+	#hero-section {
+		height: 110vh;
+	}
+
+	#hero-section h1 {
+		left: 10%;
+		font-size: 10vw;
+	}
+
+	
+	#hero-section video {
+		width: 80%;
+		height: 100%;
+		left: 0%;
+	}
+
+	#hero-section p {
+		width: 80%;
+		
+	}
+
+	#scroll-section-1 .launching-date h1 {
+		font-size: 20vw;
+		font-weight: 300;
+		letter-spacing: -32px;
+		text-align: left;
+		color: #FFFFFF;
+		font-weight: 700;
+		z-index: 10;
+	} 
+
+	#hero-section .hero-nyx-logo {
+		left: 10%;
+	}
+
+	#scroll-section-1 .nyxs_pic {
+		top: 30%;
+		height: 40vh;
+		left: 10%;
+		overflow: hidden;
+		width: 80%;
+	} 
+
+	#scroll-section-1 .nyxs_text {
+		flex-direction: column;
+		top: 50%;
+		left: 10%;
+		width: 80%;
+	} 
+
+	#scroll-section-1 .nyxs_2 .nyxs_text {
+		left: 10%;
+		text-align: right;	
+		opacity: 0;
+	} 
+
+	#scroll-section-1 .nyxs_4  .nyxs_text {
+		left: 10%;
+		text-align: right;
+		opacity: 0;
+	} 
+
+
+	#scroll-section-2 .sticky-elem .nyxs-logo-text {
+		width: 50%;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+	}
+	
+	#scroll-section-2 .sticky-elem p {
+		font-size: 1.8rem;
+		padding-top: 2%;
+		font-family: 'Inter';
+		font-weight: 300;
+		text-align: left;
+		width: 50%;
+	}
+
+	#scroll-section-3 {
+		height: 400vh;
+	}
+
+	#scroll-section-3 .how-to-play {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly; /* Centering Horizantly */
+		align-items: center; 
+		text-align: center;
+	}
+
+		
+	#scroll-section-3 .how-to-play .htp {
+		height: 60vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+		align-items: center; 
+		text-align: center;
+		z-index: 2;
+	}
+	#scroll-section-3 .how-to-play .htp-pic  {
+		height: 50vh;
+		display: flex;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain; 
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-1  {
+		width: 70%;
+		transform: none;
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-2  {
+		transform: scale(160%);
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-3  {
+		transform: scale(160%);
+
+	}
+	
+
+	#scroll-section-3 .how-to-play .htp-pic-4  {
+		transform: scale(160%);
+
+	}
+
+	
+	
+
+	#scroll-section-3 .how-to-play .reversed {
+		text-align: center;
+		flex-direction: column-reverse;
+	}
+
+	#scroll-section-3 .how-to-play .htp-title {
+		font-weight: 700;
+		font-size: 12.0vw;
+		line-height: 150%;
+	}
+	
+	#scroll-section-3 .how-to-play .htp-description {
+		font-size: 3.0vw;
+		line-height: 130%;
+	}
+	
+	#scroll-section-3 .how-to-play .text-section  {
+		/* height: 50%; */
+		display: flex;
+		margin-top: 48px;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#scroll-section-3 .how-to-play #htp-2 {
+		flex-direction: column;
+	}
+
+	#scroll-section-3 .how-to-play #htp-4 {
+		flex-direction: column;
+	}
+
+	#scroll-section-3 .how-to-play #htp-1 .htp-text-1 {
+		opacity: 0;
+	}
+
+	#scroll-section-4  .video-text {
+		top: 20%;
+	  }
+	
+
+	#scroll-section-4  .video-text p {
+		width: 100%;
+	}
+
+
+	#scroll-section-5 #team-member {
+		height: 100%;
+		width: 100%;
+		display: hidden;
+		justify-content: start; /* Centering Horizantly */
+		margin-left: 48px;
+		opacity: 0;
+	}
+	
+	#scroll-section-5 #team-member .team-photo {
+		height: 30%;
+		width: 50%;
+		z-index: 3;
+	}
+
+	
+	#scroll-section-5 #team-member .team-photo p {
+		font-size: 2vw;
+	}
+	
+	#scroll-section-5 #team-member .team-txt {
+		height: 50%;
+		width: 80%;
+		padding-left: 16px;
+		z-index: 3;
+		transform: translate(-10%,0%);
+	}
+	
+	#scroll-section-5 #team-member .team-txt h1 {
+		font-size: 6vw;
+	}
+}
+
+@media (max-width: 640px) {
+
+	#stickly-buttons {
+		position: fixed;
+		display: flex;
+		background-color: transparent;
+		/* right: 0; */
+		align-items: center;
+		justify-content: center;
+		bottom: 8px;
+		z-index: 100;
+	}
+	
+	#stickly-buttons  .global-links {
+		justify-content: space-between;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		margin: 0 auto;
+	}
+	
+	
+	#stickly-buttons .event-button .bottom-fixed {
+		position: fixed;
+	}
+	
+	#stickly-buttons .event-button {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		height: 52px;
+		width: 170px;
+		background: #0085FF;
+		border-radius: 16px;
+	}
+	
+	#stickly-buttons .learn-more {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;		
+		align-items: center;
+		justify-content: center;
+		width: 136px;
+		height: 52px;
+		background: #28E7C5;
+		border-radius: 16px;
+	}
+	
+	#stickly-buttons p {
+		width: 170px;
+		height: 26px;
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 26px;
+		text-align: center;
+		color: #000000;
+	}
+	#hero-section {
+		height:105vh;
+		min-height: 600px;			
+	}
+	/* #hero-section {
+		flex-direction: row;
+		justify-content: top;
+		align-items: top;		
+		height: 50vh;
+	} */
+	#hero-section h1 {
+		left: 10%;
+		font-size: 12vw;
+	}
+
+	#scroll-section-1 .wise-words .words {
+		line-height: 160%;
+		color: #FFFFFF;
+		font-weight: 100;
+		font-size: 4vw;
+	}
+	
+	#scroll-section-1 .wise-words .author {
+		color: #999999;
+		padding-top: 8px;
+		font-weight: 100;
+		font-size: 4vw;
+		line-height: 160%;
+	}
+
+	#scroll-section-1 .launching-date {
+		flex-direction: column;
+		justify-content: center; /* Centering Horizantly */
+		align-items: center;
+		top: 36%;
+	} 
+	
+	#scroll-section-1 .launching-date p {
+		font-size: 6vw;
+		font-weight: 300;
+		color: #FAFAFA;
+		font-weight: 100;
+	} 
+	
+	#scroll-section-1 .launching-date h1 {
+		font-size: 20vw;
+		font-weight: 800;
+		letter-spacing: -12px;
+		text-align: center;
+		width: 60vw;
+	} 
+
+
+	#scroll-section-1 .nyxs_text h1 {
+		font-size: 9vw;
+		font-weight: 700;
+	
+	}
+	
+	#scroll-section-1 .nyxs_text p {
+		font-size: 5vw;
+		opacity: 0.8;
+		font-weight: 400;
+		line-height: 140%;
+	}
+
+	#scroll-section-1 .nyxs_text div {
+		height:4vh;
+		width: 8vw;
+		background-image: url("../images/underbar.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+	}
+
+	#scroll-section-2 .sticky-elem .nyxs-logo-text {
+		background-image: url("../images/section2_text.png");
+		width: 80vw;
+		height: 20vh;
+		top: 10vh;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+	}
+
+	#scroll-section-2 .sticky-elem p {
+		font-size: 4.5vw;
+		line-height: 120%;
+		padding-top: 3.0vh;
+		width: 80vw;
+	}
+
+	#scroll-section-3 {
+		height: 350vh;
+	}
+
+	#scroll-section-3 .how-to-play {
+		display: flex;
+		padding-top: 12vh;
+	}
+
+		
+	#scroll-section-3 .how-to-play .htp {
+		height: 70vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column-reverse;
+		text-align: center;
+		justify-content: space-around;
+		align-items: center; 
+		text-align: center;
+		z-index: 2;
+	}
+	#scroll-section-3 .how-to-play .htp-pic  {
+		height: 55vh;
+		display: flex;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain; 
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-1  {
+		height: 50vh;
+		width: 80%;
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-2  {
+		height: 40vh;
+		width: 100%;
+		background-size: contain; 
+		transform: none;
+	}
+
+	#scroll-section-3 .how-to-play .htp-pic-3  {
+		height: 50vh;
+		width: 60%;
+		background-size: contain;
+		transform: none;
+
+	}
+	
+
+	#scroll-section-3 .how-to-play .htp-pic-4  {
+		height: 50vh;
+		width: 100%;
+		background-size: contain; 
+		transform: none;
+
+	}
+	
+	
+
+	#scroll-section-3 .how-to-play .reversed {
+		text-align: center;
+		flex-direction: column-reverse;
+	}
+
+	#scroll-section-3 .how-to-play .htp-title {
+		font-weight: 700;
+		font-size: 14.0vw;
+		line-height: 150%;
+	}
+	
+	#scroll-section-3 .how-to-play .htp-description {
+		font-size: 4.5vw;
+		line-height: 150%;
+	}
+	
+	#scroll-section-3 .how-to-play .text-section  {
+		/* height: 50%; */
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 0px;
+
+		align-items: top;
+		justify-content: top;
+	}
+
+	#scroll-section-3 .how-to-play #htp-2 {
+		flex-direction: column;
+	}
+
+	#scroll-section-3 .how-to-play #htp-4 {
+		flex-direction: column;
+	}
+
+
+	#scroll-section-4  .video-text {
+		top: 20%;
+	  }
+	
+
+	#scroll-section-4  .video-text h1 {
+		font-size: 12vw;
+		width: 80%;
+	  }
+	
+	#scroll-section-4  .video-text p {
+		font-size: 4.5vw;
+		padding-top: 5vh;
+		line-height: 150%;
+		width: 90%;
+	}
+
+
+	#scroll-section-5 #team-intro h1 {
+		font-size: 16vw;
+	}
+
+	#scroll-section-5 #team-member .team-txt {
+		transform: translate(-20%,10%);
+	}
+
+
+	#scroll-section-5 #team-member .team-photo {
+		height: 30%;
+		width: 70%;
+		z-index: 3;
+	}
+
+	#scroll-section-5 #team-member {
+		margin-left: 24px;
+	}
+
+	#scroll-section-5 #team-member .team-txt h1 {
+		font-size: 6vw;
+		line-height: 120%;
+	}
+
+	#scroll-section-5 #team-member .team-txt p {
+		padding-top: 4px;
+		font-size: 5vw;
+		opacity: 0.6;
+	}
+	footer .footer-section {
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		padding-left: 16px;
+		padding-right: 16px;
+		justify-content: space-between;
+		align-items: center;
+		}
+
+	footer .x-logo {
+		background-image: url("../images/x-logo.png");
+		background-repeat: no-repeat;
+		background-size: contain;  
+		background-position: top; 
+		height: 24px;
+		width: 49.12px;
+	}
+	
+	footer .footer-left {
+		height: 50%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	footer .icon-list {
+		display: flex;
+		flex-direction: row;
+		justify-content:  top right;
+		height: 100%;
+		width: 100%;
+	}
+
+	footer p {
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 2.5vw;
+		line-height: 22px;
+		text-align: right;
+		padding-right: 12px;
+		color: rgba(255, 255, 255, 0.6);
+		width: 100%;
+		transform: translateY(-50%);
+	}
+}
